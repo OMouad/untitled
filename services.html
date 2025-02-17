@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ChicChignon – Services</title>
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .button,
+    .div-wrapper,
+    .button-2 {
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      position: relative;
+    }
+    .button:hover,
+    .div-wrapper:hover,
+    .button-2:hover {
+      background-color: #444;
+    }
+    .button:active,
+    .div-wrapper:active,
+    .button-2:active {
+      background-color: #333;
+      transform: scale(0.98);
+    }
+    .button .text-wrapper-2,
+    .div-wrapper .text-wrapper-2 {
+      position: absolute;
+      top: 6px;
+      left: 12px;
+      font-family: "Inter", Helvetica;
+      font-weight: 400;
+      color: #565e6d;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 22px;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+<div class="services">
+  <div class="container">
+    <div class="div">
+      <div class="overlap">
+        <div class="container-2">
+          <div class="text-wrapper">Hair Cutting &amp; Styling</div>
+          <img
+            class="image"
+            src="./img/haircut.png"
+            alt="Hair Cutting &amp; Styling"
+          />
+          <button class="button" data-service="haircut">
+            <div class="text-wrapper-2">Choose</div>
+          </button>
+        </div>
+        <p class="precision-haircut">
+          <span class="span"> • </span>
+          <span class="text-wrapper-3">Precision Haircut - Women: $80<br /></span>
+          <span class="span"> • </span>
+          <span class="text-wrapper-3">Precision Haircut - Men: $50<br /></span>
+          <span class="span"> • </span>
+          <span class="text-wrapper-3">Precision Haircut - Children: $35<br /></span>
+          <span class="span"> • </span>
+          <span class="text-wrapper-3">Blowout: $40<br /></span>
+          <span class="span"> • </span>
+          <span class="text-wrapper-3">Updo Styling: $100<br /></span>
+          <span class="span"> • </span>
+          <span class="text-wrapper-3">Braiding: $60</span>
+        </p>
+      </div>
+
+      <div class="text-wrapper-4">Our Services</div>
+
+      <div class="container-3">
+        <div class="text-wrapper">Coloring Services</div>
+        <img
+          class="image"
+          src="./img/color.jpg"
+          alt="Coloring Services"
+        />
+        <button class="button" data-service="coloring">
+          <div class="text-wrapper-2">Choose</div>
+        </button>
+        <p class="p">
+          • Luxe Balayage (Half Head): $150<br />
+          • Luxe Balayage (Full Head): $250<br />
+          • Custom Color Melts (Half Head): $180<br />
+          • Custom Color Melts (Full Head): $300<br />
+          • Vibrant Highlights (Half Head): $100<br />
+          • Vibrant Highlights (Full Head): $180
+        </p>
+      </div>
+
+      <div class="container-4">
+        <div class="text-wrapper">Hair Treatments</div>
+        <img
+          class="image"
+          src="./img/treatment.jpg"
+          alt="Hair Treatments"
+        />
+        <button class="button" data-service="treatment">
+          <div class="text-wrapper-2">Choose</div>
+        </button>
+        <p class="p">
+          • Keratin Smoothing Treatment: $350<br />
+          • Deep Conditioning Therapy: $70<br />
+          • Scalp Detox Treatment: $60
+        </p>
+      </div>
+
+      <div class="container-5">
+        <div class="text-wrapper">Special Occasion Hair</div>
+        <img
+          class="image"
+          src="./img/bridal.jpg"
+          alt="Special Occasion Hair"
+        />
+        <button class="button" data-service="special">
+          <div class="text-wrapper-2">Choose</div>
+        </button>
+        <p class="p">
+          • Signature Chignon Styling: $120<br />
+          • Bridal Package: $400<br />
+          • Event Styling: $100
+        </p>
+      </div>
+
+      <div class="container-6">
+        <div class="overlap-group">
+          <div class="text-wrapper-5">Extensions / Enhancements</div>
+          <p class="tape-in-extensions">
+            • Tape-In Extensions: $300<br />
+            • Sew-In Extensions: $250<br />
+            • Fusion Extensions: $400<br />
+            • Volume Boost Treatment: $80
+          </p>
+        </div>
+        <img
+          class="image"
+          src="./img/extension.jpg"
+          alt="Extensions / Enhancements"
+        />
+        <button class="div-wrapper" data-service="extensions">
+          <div class="text-wrapper-2">Choose</div>
+        </button>
+      </div>
+
+      <div class="container-7">
+        <div class="text-wrapper">Men's Grooming</div>
+        <img
+          class="image"
+          src="./img/beard.jpg"
+          alt="Men's Grooming"
+        />
+        <button class="div-wrapper" data-service="mens">
+          <div class="text-wrapper-2">Choose</div>
+        </button>
+        <p class="p">
+          • Men's Classic Cut: $50<br />
+          • Beard Trim: $25<br />
+          • Beard Shaping: $35<br />
+          • Men's Hair Color: Starting at $80
+        </p>
+      </div>
+
+      <div class="container-8">
+        <div class="text-wrapper">Signature Services</div>
+        <img
+          class="image"
+          src="./img/signature.jpg"
+          alt="Signature Services"
+        />
+        <button class="div-wrapper" data-service="signature">
+          <div class="text-wrapper-2">Choose</div>
+        </button>
+        <p class="p">
+          • ChicChignon Transformation Package: $600<br />
+          • Ultimate Bridal Experience: $800<br />
+          • Executive Grooming Package: $150<br />
+          • Celebrity Glam Session: $500
+        </p>
+      </div>
+
+      <button class="button-2">
+        <a href="location.html" class="text-wrapper-6">Choose a Location.</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="container-9">
+    <div class="header-menu">
+      <div class="frame">
+        <a href="services.html" class="text-wrapper-7">Services</a>
+      </div>
+      <div class="frame-5">
+        <a href="about-us.html" class="text-wrapper-7">About Us</a>
+      </div>
+      <div class="frame-4">
+        <a href="index.html" class="text-wrapper-7">Home</a>
+      </div>
+      <div class="frame-3">
+        <a href="location.html" class="text-wrapper-7">Location</a>
+      </div>
+    </div>
+    <div class="container-10">
+      <div class="text-wrapper-8">ChicChignon</div>
+      <img
+        class="img"
+        src="./img/logo.png"
+        alt="ChicChignon Logo"
+      />
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const serviceButtons = document.querySelectorAll('button[data-service]');
+    serviceButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const service = this.getAttribute('data-service');
+        sessionStorage.setItem('selectedService', service);
+
+        serviceButtons.forEach(btn => btn.classList.remove('selected'));
+        this.classList.add('selected');
+      });
+    });
+
+    const reservationLink = document.querySelector('.button-2 a');
+    reservationLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      const service = sessionStorage.getItem('selectedService');
+      let url = 'location.html';
+      if (service) {
+        url += '?service=' + encodeURIComponent(service);
+      }
+      window.location.href = url;
+    });
+  });
+</script>
+</body>
+</html>

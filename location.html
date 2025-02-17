@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ChicChignon – Location</title>
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .button-select {
+      all: unset;
+      box-sizing: border-box;
+      width: 200px;
+      height: 36px;
+      border: 1px solid #565e6d;
+      cursor: pointer;
+    }
+    .button-select:hover,
+    .button-select:active {
+      background-color: #cfd2da;
+      border: 1px solid transparent;
+    }
+    .button-selected {
+      all: unset;
+      box-sizing: border-box;
+      width: 200px;
+      height: 36px;
+      background-color: #cfd2da;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .scrollable-locations {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .scrollable-locations .container-3.store-location {
+      position: static !important;
+      width: 100% !important;
+      height: auto !important;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+<div class="location">
+  <div class="container">
+    <div class="overlap-group">
+      <img class="image" src="img/map.png" alt="Location Background" />
+
+      <div class="container-2" id="storeInfo"
+           data-address="4820 Oasis Drive, Ottawa, ON K1A 2B5"
+           data-store="ChicChignon Downtown Ottawa"
+           data-phone="(613) 555-6789"
+           data-email="downtown@chicchignon.ca">
+        <p class="monday-saturday">
+          Monday - Saturday 9:00 AM - 7:00 AM&nbsp;&nbsp;Sunday - Closed<br />
+          4820 Oasis Drive, Ottawa, ON K1A 2B5
+        </p>
+        <div class="text-wrapper-2">ChicChignon Downtown Ottawa</div>
+        <img class="image-2" src="img/ottawa.jpg" alt="Downtown Ottawa Storefront" />
+        <div class="text-wrapper-3">(613) 555-6789</div>
+        <div class="text-wrapper-4">downtown@chicchignon.ca</div>
+        <img class="phone" src="img/phone.png" alt="Phone Icon" />
+        <img class="love-heart-pin" src="img/heart.png" alt="Favorite Icon" />
+        <button class="div-wrapper"><a href="#" class="text-wrapper-5">Confirm</a></button>
+      </div>
+    </div>
+
+    <div class="textbox">
+      <input type="text" class="p" placeholder="Find a store near you" />
+      <img class="search" src="img/search.png" alt="Search Icon" />
+    </div>
+
+
+    <div class="scrollable-locations">
+      <div class="container-3 store-location"
+           data-address="4820 Oasis Drive, Ottawa, ON K1A 2B5"
+           data-store="ChicChignon Downtown Ottawa"
+           data-phone="(613) 555-6789"
+           data-email="downtown@chicchignon.ca"
+           data-image="img/ottawa.jpg">
+        <div class="container-4">
+          <p class="text-wrapper-7">
+            4820 Oasis Drive, Ottawa, ON K1A 2B5
+          </p>
+          <div class="text-wrapper-8">ChicChignon Downtown Ottawa</div>
+          <img class="love-heart-pin-2" src="img/heart.png" alt="Favorite Icon" />
+          <button class="button-select select-location">
+            <div class="text-wrapper-9">Select</div>
+          </button>
+          <p class="text-wrapper-10">1.5 km / 10 min</p>
+        </div>
+      </div>
+      <div class="container-3 store-location"
+           data-address="1234 Richmond Road, Ottawa, ON K1Z 1A1"
+           data-store="ChicChignon Westboro"
+           data-phone="(613) 555-1234"
+           data-email="westboro@chicchignon.ca"
+           data-image="img/westboro.jpg">
+        <div class="container-5">
+          <p class="text-wrapper-7">
+            1234 Richmond Road, Ottawa, ON K1Z 1A1
+          </p>
+          <div class="text-wrapper-8">ChicChignon Westboro</div>
+          <img class="love-heart-pin-2" src="img/heart.png" alt="Favorite Icon" />
+          <button class="button-select select-location">
+            <div class="text-wrapper-11">Select</div>
+          </button>
+          <p class="text-wrapper-12">5.0 km / 20 min</p>
+        </div>
+      </div>
+      <div class="container-3 store-location"
+           data-address="101 Bay Street, Toronto, ON M5J 2L7"
+           data-store="ChicChignon Toronto - Downtown Core"
+           data-phone="(416) 555-7890"
+           data-email="toronto-downtown@chicchignon.ca"
+           data-image="img/toronto1.jpg">
+        <div class="container-6">
+          <p class="text-wrapper-7">
+            101 Bay Street, Toronto, ON M5J 2L7
+          </p>
+          <p class="text-wrapper-8">
+            ChicChignon Toronto - Downtown Core
+          </p>
+          <img class="love-heart-pin-2" src="img/heart.png" alt="Favorite Icon" />
+          <button class="button-select select-location">
+            <div class="text-wrapper-11">Select</div>
+          </button>
+          <p class="text-wrapper-12">2.0 km / 15 min</p>
+        </div>
+      </div>
+      <div class="container-3 store-location"
+           data-address="57 Avenue Road, Toronto, ON M5R 3L2"
+           data-store="ChicChignon Toronto - Yorkville"
+           data-phone="(416) 555-4567"
+           data-email="toronto-yorkville@chicchignon.ca"
+           data-image="img/toronto2.jpg">
+        <div class="container-7">
+          <p class="text-wrapper-7">
+            57 Avenue Road, Toronto, ON M5R 3L2
+          </p>
+          <div class="text-wrapper-8">ChicChignon Toronto - Yorkville</div>
+          <img class="love-heart-pin-2" src="img/heart.png" alt="Favorite Icon" />
+          <button class="button-select select-location">
+            <div class="text-wrapper-11">Select</div>
+          </button>
+          <p class="text-wrapper-12">4.0 km / 20 min</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-wrapper-13">Find Our Locations</div>
+  </div>
+
+  <div class="container-8">
+    <div class="header-menu">
+      <div class="frame">
+        <a href="location.html" class="text-wrapper-14">Location</a>
+      </div>
+      <div class="frame-3">
+        <a href="services.html" class="text-wrapper-14">Services</a>
+      </div>
+      <div class="frame-4">
+        <a href="index.html" class="text-wrapper-14">Home</a>
+      </div>
+      <div class="frame-2">
+        <a href="about-us.html" class="text-wrapper-14">Contact Us</a>
+      </div>
+    </div>
+    <div class="container-9">
+      <div class="text-wrapper-15">ChicChignon</div>
+      <img class="image-3" src="img/logo.png" alt="ChicChignon Logo" />
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const params = new URLSearchParams(window.location.search);
+      const service = params.get('service');
+
+    const storeInfo = document.getElementById('storeInfo');
+    const storeLocations = document.querySelectorAll('.store-location');
+
+    storeLocations.forEach(function(locationItem) {
+      const selectBtn = locationItem.querySelector('.select-location');
+      selectBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelectorAll('.select-location').forEach(function(btn) {
+          btn.classList.remove('button-selected');
+          btn.classList.add('button-select');
+        });
+        selectBtn.classList.remove('button-select');
+        selectBtn.classList.add('button-selected');
+
+        const address = locationItem.getAttribute('data-address');
+        const store = locationItem.getAttribute('data-store');
+        const phone = locationItem.getAttribute('data-phone');
+        const email = locationItem.getAttribute('data-email');
+        const image = locationItem.getAttribute('data-image');
+
+        storeInfo.innerHTML = `
+          <p class="monday-saturday">
+            Monday - Saturday 9:00 AM - 7:00 AM&nbsp;&nbsp;Sunday - Closed<br />
+            ${address}
+          </p>
+          <div class="text-wrapper-2">${store}</div>
+          <img class="image-2" src="${image}" alt="Storefront" />
+          <div class="text-wrapper-3">${phone}</div>
+          <div class="text-wrapper-4">${email}</div>
+          <img class="phone" src="img/phone.png" alt="Phone Icon" />
+          <img class="love-heart-pin" src="img/heart.png" alt="Favorite Icon" />
+          <button id="confirmLocationBtn" class="div-wrapper">
+            <a href="#" class="text-wrapper-5">Confirm</a>
+          </button>
+        `;
+
+        const confirmLocationBtn = document.getElementById('confirmLocationBtn');
+        confirmLocationBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const queryParams = new URLSearchParams({
+            address: address,
+            store: store,
+            phone: phone,
+            email: email,
+            image: image,
+            service: service
+          });
+          window.location.href = 'reservation.html?' + queryParams.toString();
+        });
+      });
+    });
+
+    const serviceSelect = document.getElementById('serviceSelect');
+    if (serviceSelect) {
+      const params = new URLSearchParams(window.location.search);
+      const serviceParam = params.get('service');
+      if (serviceParam) {
+        serviceSelect.value = serviceParam;
+      }
+    }
+
+    const bookAppointmentBtn = document.getElementById('bookAppointmentBtn');
+    if (bookAppointmentBtn) {
+      bookAppointmentBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const nameEl = document.getElementById('yourName');
+        const serviceEl = document.getElementById('serviceSelect');
+        const dateEl = document.getElementById('reservationDate');
+        const timeEl = document.getElementById('reservationTime');
+        const stylistEl = document.getElementById('preferredStylist');
+
+        if (!nameEl || !serviceEl || !dateEl || !timeEl || !stylistEl) {
+          console.error('One or more reservation form elements were not found.');
+          return;
+        }
+
+        const name = nameEl.value;
+        const service = serviceEl.value;
+        const date = dateEl.value;
+        const time = timeEl.value;
+        const stylist = stylistEl.value;
+
+        if (!name || !service || !date || !time || !stylist) {
+          alert("Please fill in all the fields.");
+          return;
+        }
+
+        const queryParams = new URLSearchParams({
+          fullName: name,
+          service: service,
+          date: date,
+          time: time,
+          stylist: stylist
+        });
+        window.location.href = 'client-info.html?' + queryParams.toString();
+      });
+    }
+
+
+  });
+</script>
+</body>
+</html>

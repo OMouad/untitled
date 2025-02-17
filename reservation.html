@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ChicChignon – Reservation</title>
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .textfield,
+    .textfield-2 {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-family: "Inter", Helvetica;
+      font-size: 16px;
+      border: 1px solid #bcc1ca;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    .dropdown-button label,
+    .dropdown-button-2 label,
+    .dropdown-button-3 label,
+    .dropdown-button-4 label,
+    .dropdown-button-5 label {
+      position: relative;
+      top: 6px;
+      left: 12px;
+      font-family: "Inter", Helvetica;
+      font-weight: 400;
+      color: #565e6d;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 22px;
+      white-space: nowrap;
+    }
+    select.textfield-2 {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    .container-2,
+    .header-menu {
+      position: relative;
+      z-index: 10;
+    }
+    .reservation .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(23, 26, 31, 0.4);
+      z-index: 1;
+    }
+    .reservation .container-4 {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+<div class="reservation">
+  <div class="overlap">
+    <div class="container-2">
+      <div class="header-menu">
+        <div class="div-wrapper">
+          <a href="about-us.html" class="text-wrapper-3">About Us</a>
+        </div>
+        <div class="frame-3">
+          <a href="location.html" class="text-wrapper-3">Location</a>
+        </div>
+        <div class="frame-2">
+          <a href="index.html" class="text-wrapper-3">Home</a>
+        </div>
+        <div class="frame-4">
+          <a href="services.html" class="text-wrapper-3">Services</a>
+        </div>
+      </div>
+      <div class="container-3">
+        <div class="text-wrapper-4">ChicChignon</div>
+        <img class="img" src="img/logo.png" alt="ChicChignon Logo" />
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="container-4">
+      <div class="text-wrapper-5">Reservation</div>
+
+      <button class="button-2" id="bookAppointmentBtn">
+        <span class="text-wrapper-6">Book Appointment</span>
+      </button>
+
+      <p class="p">
+        Secure your spot at ChicChignon for a luxurious hairstyling experience.
+        Select your desired service, stylist, date, and time, and we’ll ensure you’re
+        pampered in our elegant salon.
+      </p>
+
+      <div class="dropdown-button">
+        <label for="yourName">Your Full Name</label>
+        <input
+          type="text"
+          id="yourName"
+          class="textfield"
+          placeholder="Your full name"
+          required
+        />
+      </div>
+
+      <div class="dropdown-button-2">
+        <label for="serviceSelect">Service</label>
+        <select id="serviceSelect" class="textfield-2" required>
+          <option value="">Select a service</option>
+          <option value="haircut">Haircut &amp; Styling</option>
+          <option value="coloring">Coloring Services</option>
+          <option value="treatment">Hair Treatments</option>
+          <option value="special">Special Occasion Hair</option>
+          <option value="extensions">Extensions / Enhancements</option>
+          <option value="mens">Men's Grooming</option>
+          <option value="signature">Signature Services</option>
+        </select>
+      </div>
+
+      <div class="dropdown-button-3">
+        <label for="reservationDate">Date</label>
+        <input type="date" id="reservationDate" class="textfield-2" required />
+      </div>
+
+      <div class="dropdown-button-4">
+        <label for="reservationTime">Time</label>
+        <input type="time" id="reservationTime" class="textfield-2" required />
+      </div>
+
+      <div class="dropdown-button-5">
+        <label for="preferredStylist">Preferred Stylist</label>
+        <select id="preferredStylist" class="textfield-2" required>
+          <option value="">Choose your stylist</option>
+          <option value="jessica">Jessica</option>
+          <option value="alex">Alex</option>
+          <option value="maria">Maria</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get('service');
+    if (service) {
+      document.getElementById('serviceSelect').value = service;
+    }
+
+    document.getElementById('bookAppointmentBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const formElements = [
+        document.getElementById('yourName'),
+        document.getElementById('serviceSelect'),
+        document.getElementById('reservationDate'),
+        document.getElementById('reservationTime'),
+        document.getElementById('preferredStylist')
+      ];
+
+      for (let element of formElements) {
+        if (!element.value) {
+          alert('Please fill out all required fields.');
+          return;
+        }
+      }
+
+      var name = document.getElementById('yourName').value;
+      var service = document.getElementById('serviceSelect').value;
+      var date = document.getElementById('reservationDate').value;
+      var time = document.getElementById('reservationTime').value;
+      var stylist = document.getElementById('preferredStylist').value;
+
+      var queryParams = new URLSearchParams({
+        fullName: name,
+        service: service,
+        date: date,
+        time: time,
+        stylist: stylist
+      });
+
+      window.location.href = 'client-info.html?' + queryParams.toString();
+    });
+  });
+</script>
+</body>
+</html>

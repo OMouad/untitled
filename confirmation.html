@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ChicChignon – Confirmation</title>
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body>
+<div class="confirmation">
+  <p class="text-wrapper">Thank You for Your Appointment!</p>
+  <p class="div">Your booking has been confirmed</p>
+
+  <div class="overlap-group">
+    <div class="container">
+      <button class="button">
+        <a href="index.html" class="text-wrapper-2">Back to home</a>
+      </button>
+      <div class="text-wrapper-3">Service details:</div>
+      <img class="line" src="img/line.png" alt="Divider Line" />
+      <div id="confirmTime" class="text-wrapper-4">2:00 PM</div>
+      <div class="text-wrapper-5">Time</div>
+      <div class="text-wrapper-6">$80</div>
+      <img class="img" src="img/line.png" alt="Divider Line" />
+      <div class="text-wrapper-7">Service:</div>
+      <div class="text-wrapper-8">Customer</div>
+      <div id="confirmCustomer" class="text-wrapper-9">Name </div>
+      <img class="calendar-date" src="img/calendar--picto.png" />
+      <div id="confirmDate" class="text-wrapper-10">January 29, 2025</div>
+      <img class="clock" src="img/clock-picto.png" alt="Clock Icon" />
+      <div class="text-wrapper-11">Total</div>
+      <img class="currency-dollar" src="img/dollar-picto.png" alt="Dollar Icon" />
+      <img class="profile" src="img/profile-picto.png" alt="Profile Icon" />
+      <div class="text-wrapper-12">Date</div>
+      <div class="container-2">
+        <div class="text-wrapper-13">$80</div>
+        <div class="overlap-group-2">
+          <p class="p">
+            Includes a personalized haircut, wash, and style.
+          </p>
+          <div id="confirmStylist" class="text-wrapper-14">Haircut with Jessica</div>
+        </div>
+        <div class="tag">
+          <div class="frame">
+            <div class="text-wrapper-15">x1</div>
+          </div>
+        </div>
+        <img
+          id="serviceImage"
+          class="image"
+          src="img/image-189.png"
+          alt="Service Image"
+        />
+      </div>
+      <div id="confirmService" class="text-wrapper-16">Haircut</div>
+      <img
+        class="haircut"
+        src="img/haircut-picto.png"
+        alt="Haircut Icon"
+      />
+    </div>
+    <div class="text-wrapper-17">How was your experience?</div>
+  </div>
+
+  <img
+    class="rating"
+    src="img/rating-1.svg"
+    alt="Rating Stars"
+  />
+
+  <div class="container-3">
+    <div class="header-menu">
+      <div class="frame-2">
+        <a href="about-us.html" class="text-wrapper-18">About Us</a>
+      </div>
+      <div class="frame-5">
+        <a href="location.html" class="text-wrapper-18">Location</a>
+      </div>
+      <div class="frame-3">
+        <a href="index.html" class="text-wrapper-18">Home</a>
+      </div>
+      <div class="frame-4">
+        <a href="services.html" class="text-wrapper-18">Services</a>
+      </div>
+    </div>
+    <div class="container-4">
+      <div class="text-wrapper-19">ChicChignon</div>
+      <img
+        class="image-2"
+        src="img/logo.png"
+        alt="ChicChignon Logo"
+      />
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+
+    const fullName = params.get('fullName');
+    const service = params.get('service');
+    const date = params.get('date');
+    const time = params.get('time');
+    const stylist = params.get('stylist');
+
+    const serviceImages = {
+      haircut: 'img/haircut.png',
+      coloring: 'img/color.jpg',
+      treatment: 'img/treatment.jpg',
+      special: 'img/bridal.jpg',
+      extensions: 'img/extension.jpg',
+      mens: 'img/beard.jpg',
+      signature: 'img/signature.jpg'
+    };
+
+    if (time) {
+      document.getElementById('confirmTime').textContent = time;
+    }
+    if (fullName) {
+      document.getElementById('confirmCustomer').textContent = fullName;
+    }
+    if (date) {
+      document.getElementById('confirmDate').textContent = date;
+    }
+    if (service) {
+      document.getElementById('confirmService').textContent = service;
+      if (serviceImages[service]) {
+        const serviceImageEl = document.getElementById('serviceImage');
+        serviceImageEl.src = serviceImages[service];
+        serviceImageEl.alt = service + ' service image';
+      }
+    }
+    if (stylist && service) {
+      document.getElementById('confirmStylist').textContent = service + " with " + stylist;
+    } else if (service) {
+      document.getElementById('confirmStylist').textContent = service;
+    }
+  });
+</script>
+</body>
+</html>
